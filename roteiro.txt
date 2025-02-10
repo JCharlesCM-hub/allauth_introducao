@@ -1,0 +1,28 @@
+python -m venv venv
+
+venv\Scripts\Activate
+
+pip install django
+
+python --version
+
+python -m django --version
+
+pip install django-allauth
+
+django-admin startproject allauth_introducao .
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+]
+
+python manage.py migrate
+
+python manage.py createsuperuser
+    charles
+    j2cm1928
+
+python manage.py runserver
+
+http://127.0.0.1:8000/admin/
