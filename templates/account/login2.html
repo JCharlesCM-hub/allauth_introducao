@@ -1,0 +1,24 @@
+{% load static %}  <!-- Para carregar arquivos estáticos como CSS e imagens -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zeus Tech</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Arquivo CSS externo -->
+</head>
+<body>
+
+<div class="login-container">
+    <img src="{% static 'images/logo.png' %}" alt="Zeus Tech" class="logo">
+    <h2>Bem-vindo à Zeus Tech</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Entrar</button>
+    </form>
+    <p><a href="{% url 'account_reset_password' %}">Esqueceu sua senha?</a></p>
+</div>
+
+</body>
+</html>
