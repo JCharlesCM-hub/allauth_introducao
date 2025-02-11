@@ -142,3 +142,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# RECUPERAR SENHA
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'contato@zeustechtech.com'  
+EMAIL_HOST_PASSWORD = '1$Deusrei02'  
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'contato@zeustechtech.com' 
+SERVER_EMAIL=DEFAULT_FROM_EMAIL
